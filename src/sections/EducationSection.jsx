@@ -8,9 +8,23 @@ const EducationSection = () => {
     const titleRef = useRef(null);
     const cardRef = useRef(null);
     const sectionRef = useRef(null);
+    const tooltipRef = useRef(null);
 
     const [showTooltip, setShowTooltip] = useState(false);
-    const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+    // Proper GSAP-powered mouse tracking
+    const handleMouseMove = (e) => {
+        const rect = sectionRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        gsap.to(tooltipRef.current, {
+            left: x,
+            top: y,
+            duration: 0.2,
+            ease: "power2.out"
+        });
+    };
 
     useEffect(() => {
         gsap.fromTo(
@@ -46,12 +60,6 @@ const EducationSection = () => {
         );
     }, []);
 
-    // Mouse tracking
-    const handleMouseMove = (e) => {
-        const rect = sectionRef.current.getBoundingClientRect();
-        setCursorPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-    };
-
     return (
         <section
             ref={sectionRef}
@@ -61,22 +69,28 @@ const EducationSection = () => {
             onMouseLeave={() => setShowTooltip(false)}
             onMouseMove={handleMouseMove}
         >
-            {/* Floating Resume Tooltip */}
-            {showTooltip && (
-                <a
-                    href="/plain.pdf"
-                    download
-                    className="absolute z-50 bg-green-700 hover:bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded shadow transition pointer-events-auto"
-                    style={{
-                        top: cursorPos.y,
-                        left: cursorPos.x,
-                        transform: "translate(-50%, -150%)",
-                        pointerEvents: "auto",
-                    }}
-                >
-                    Resume
-                </a>
-            )}
+            {/* ✅ Resume Tooltip with GSAP-controlled position */}
+            <a
+                ref={tooltipRef}
+                href="/resume.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                draggable={false}
+                className={`
+                    absolute z-50
+                    bg-green-700 hover:bg-green-600
+                    text-white text-sm font-semibold
+                    px-3 py-1 rounded shadow
+                    pointer-events-auto
+                    translate-x-[-50%] translate-y-[-50%]
+                    ${showTooltip ? "block": "hidden"}
+              `}
+                style={{ top: 0, left: 0 }}
+            >
+                Resume
+            </a>
+
 
             <h2
                 ref={titleRef}
