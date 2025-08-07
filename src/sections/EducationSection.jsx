@@ -64,7 +64,7 @@ const EducationSection = () => {
             {/* Floating Resume Tooltip */}
             {showTooltip && (
                 <a
-                    href="/resume.pdf"
+                    href="/plain.pdf"
                     download
                     className="absolute z-50 bg-green-700 hover:bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded shadow transition pointer-events-auto"
                     style={{

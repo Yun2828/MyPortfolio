@@ -20,14 +20,24 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex gap-6 text-sm md:text-base">
-                    {navItems.map(({ id, label }) => (
-                        <button
-                            key={id}
-                            onClick={() => scrollToSection(id)}
-                            className="hover:text-green-100 transition duration-300 font-medium"
-                        >
-                            {label}
-                        </button>
+                    {navItems.map(({ id, label, download }) =>
+                        download ? (
+                            <a
+                                key={id}
+                                href="/resume.pdf"
+                                download
+                                className="hover:text-green-100 transition duration-300 font-medium"
+                            >
+                                {label}
+                            </a>
+                        ) : (
+                            <button
+                                key={id}
+                                onClick={() => scrollToSection(id)}
+                                className="hover:text-green-100 transition duration-300 font-medium"
+                            >
+                                {label}
+                            </button>
                     ))}
                 </div>
 
@@ -54,14 +64,25 @@ const Navbar = () => {
 
                 {/* Cute Buttons in flex-col */}
                 <div className="flex flex-col items-center justify-center gap-6 px-6 mt-10">
-                    {navItems.map(({ id, label }) => (
-                        <button
-                            key={id}
-                            onClick={() => scrollToSection(id)}
-                            className="w-full text-center text-lg font-semibold text-green-300 bg-green-900 hover:bg-green-700 active:bg-green-800 py-3 px-4 rounded-xl shadow transition-all duration-200"
-                        >
-                            {label}
-                        </button>
+                    {navItems.map(({ id, label, download }) =>
+                        download ? (
+                            <a
+                                key={id}
+                                href="/resume.pdf"
+                                download
+                                onClick={() => setIsOpen(false)}
+                                className="w-full text-center text-lg font-semibold text-green-300 bg-green-900 hover:bg-green-700 active:bg-green-800 py-3 px-4 rounded-xl shadow transition-all duration-200"
+                            >
+                                {label}
+                            </a>
+                        ) : (
+                            <button
+                                key={id}
+                                onClick={() => scrollToSection(id)}
+                                className="w-full text-center text-lg font-semibold text-green-300 bg-green-900 hover:bg-green-700 active:bg-green-800 py-3 px-4 rounded-xl shadow transition-all duration-200"
+                            >
+                                {label}
+                            </button>
                     ))}
                 </div>
             </div>
