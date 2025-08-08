@@ -40,8 +40,8 @@ const cards = [
     tech: "React.js, GSAP, Tailwind CSS, HTML",
     responsibilities: [
         "Designed and developed a fully responsive portfolio, enhancing user experience with scroll-triggered effects.",
-        "Achieved 100% responsiveness across all devices and screen sizes.",
-        "Enhanced accessibility and SEO by adhering to WCAG standards and scored 96 in Best Practices category.",
+        "Achieved full responsiveness across all devices and screen sizes by leveraging Tailwind CSS’s utilities.",
+        "Enhanced accessibility and SEO by adhering to WCAG standards and scored 96 in the Best Practices category.",
         "Implemented component-based architecture and abstracted separate static data folders to improve reusability."
     ]
   },
