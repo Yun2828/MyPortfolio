@@ -72,7 +72,7 @@ const EducationSection = () => {
             {/* ✅ Resume Tooltip with GSAP-controlled position */}
             <a
                 ref={tooltipRef}
-                href="/resume.pdf"
+                href="/Yun_Resume.pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"

@@ -68,7 +68,7 @@ const Navbar = () => {
                         download ? (
                             <a
                                 key={id}
-                                href="/resume.pdf"
+                                href="/Yun_Resume.pdf"
                                 download
                                 onClick={() => setIsOpen(false)}
                                 className="w-full text-center text-lg font-semibold text-green-300 bg-green-900 hover:bg-green-700 active:bg-green-800 py-3 px-4 rounded-xl shadow transition-all duration-200"
