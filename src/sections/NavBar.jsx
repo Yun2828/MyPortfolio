@@ -24,7 +24,7 @@ const Navbar = () => {
                         download ? (
                             <a
                                 key={id}
-                                href="/resume.pdf"
+                                href="/Yun_Resume.pdf"
                                 download
                                 className="hover:text-green-100 transition duration-300 font-medium"
                             >

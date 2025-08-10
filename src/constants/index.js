@@ -23,6 +23,11 @@ const projects = [
     link: "https://github.com/Yun2828/Real-Time-Chat-Rooms/tree/master",
   },
   {
+    image: "/images/book_recommender.png",
+    title: "Semantic Book Recommender",
+    link: "https://github.com/Yun2828/Semantic-Book-Recommender",
+  },
+  {
     image: "/images/stock.png",
     title: "Stock Price Prediction Model",
     link: "https://github.com/Yun2828/Stock-Price-Prediction",
@@ -52,6 +57,15 @@ const cards = [
       "Built a full-stack real-time chat using Socket.IO and dynamic DOM updates using vanilla JavaScript to enable bidirectional websocket communication, reducing message latency by 95% with zero page reloads.",
       "Implemented server-side routing with Express.js and Nodemon for automatic server restarts.",
       "Utilized modular architecture with components to improve reusability and reduce debugging time.",
+    ]
+  },
+  {
+    title: "Semantic Book Recommender",
+    tech: "Python, Langchain, Gradio, OpenAI, Pandas, Numpy, Matplotlib, tqdm",
+    responsibilities: [
+      "Implemented zero-shot text classification pipeline using fine-tuned Hugging Face transformers, achieving 78% correct prediction score when determining book categories based on descriptions.",
+      "Integrated langchain and openai embeddings for vector embedding and matched through cosine similarity algorithms.",
+      "Developed Gradio dashboard with category and emotional tones with responsive gallery layout."
     ]
   },
   {
