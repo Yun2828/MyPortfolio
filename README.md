@@ -1,13 +1,27 @@
-# React + Vite
+# Yun's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:** [yun-swe.vercel.app](https://yun-swe.vercel.app)  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Overview
+A fully responsive personal portfolio website built with **React.js, GSAP, Tailwind CSS, and HTML**.  
+The site showcases projects, skills, and experience with smooth scroll-triggered animations and a clean, modern design.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# MyPortfolio
+---
+
+## Features
+-  **Scroll-Triggered Effects** – Enhanced interactivity using **GSAP** animations.
+-  **Fully Responsive** – Seamless experience across all devices and screen sizes with **Tailwind CSS** utilities.
+-  **Accessibility & SEO** – Adhered to **WCAG standards**, achieving a **96 Best Practices** score.
+-  **Component-Based Architecture** – Modular React components for easier maintenance and scalability.
+-  **Reusable Static Data** – Abstracted static data into separate folders for improved reusability and clean structure.
+
+---
+
+## Tech Stack
+- **Frontend:** React.js, Vite, Tailwind CSS
+- **Animations:** GSAP (ScrollTrigger)
+- **Hosting:** Vercel
+- **Markup:** HTML5
